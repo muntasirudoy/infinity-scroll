@@ -109,14 +109,11 @@ export default function UserFeed() {
           <AlertCircle className="h-4 w-4" />
           <AlertDescription className="mt-2">
             <div className="space-y-2">
-              <p className="font-medium">Failed to load users</p>
+              <p className="font-medium">Something went wrong</p>
               <p className="text-sm text-muted-foreground">
                 {error.message || "Please check your connection and try again."}
               </p>
-              <Button onClick={() => mutate()} size="sm" className="mt-3" disabled={isValidating}>
-                <RefreshCw className={`h-4 w-4 mr-2 ${isValidating ? "animate-spin" : ""}`} />
-                Retry
-              </Button>
+
             </div>
           </AlertDescription>
         </Alert>
